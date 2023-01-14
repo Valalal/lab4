@@ -12,7 +12,7 @@ services:
       - flask
 
   flask:
-    image: "obrazkiseliovavm/flask:2.0"
+    image: "obrazkiseliovavm/flask:3.51"
     container_name: flask
     environment:
       - FLASK_DEBUG=True
@@ -21,7 +21,7 @@ services:
       - ./app:/app
     ports:
       - "5000:5000"
-    command: sh -c "pip istall -r requirements.txt && python app.py"
+    
     depends_on:
       - postgres
 
